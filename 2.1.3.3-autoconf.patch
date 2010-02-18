@@ -1,0 +1,16 @@
+--- origsrc/cairo-dock-plugins-2.1.3-3/configure.ac	2010-02-13 05:00:03.000000000 -0600
++++ src/cairo-dock-plugins-2.1.3-3/configure.ac	2010-02-17 00:46:18.933400500 -0600
+@@ -25,13 +25,6 @@ AC_SUBST(pkgdatadir)
+ libdir=[`pkg-config cairo-dock --variable=pluginsdir`]
+ AC_SUBST(libdir)
+ 
+-srcdir="."
+-AC_SUBST(srcdir)
+-top_srcdir=".."
+-AC_SUBST(top_srcdir)
+-top_builddir=".."
+-AC_SUBST(top_builddir)
+-
+ PKG_CHECK_MODULES(PACKAGE, "gtk+-2.0 gthread-2.0 cairo librsvg-2.0 dbus-1 dbus-glib-1 libxml-2.0 gtkglext-1.0 cairo-dock")
+ 
+ 

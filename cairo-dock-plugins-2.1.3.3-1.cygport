@@ -1,0 +1,20 @@
+inherit gnome2
+
+upv="${PV[1]}.${PV[2]}.${PV[3]}-${PV[4]}"
+
+DESCRIPTION="Dock application (plugins)"
+HOMEPAGE="http://www.glx-dock.org/"
+SRC_URI="http://launchpad.net/cairo-dock-plug-ins/${PV[1]}.${PV[2]}/${upv%-*}/+download/${PN}-${upv}.tar.gz"
+SRC_DIR="${PN}-${upv}"
+
+CYGCONF_ARGS="
+	--disable-old-gnome-integration
+	--disable-alsa-mixer
+	--disable-compiz-icon
+	--disable-network-monitor
+	--disable-powermanager
+	--disable-wifi
+	--disable-xgamma
+"
+MAKEOPTS+=" LDFLAGS=-no-undefined"
+
