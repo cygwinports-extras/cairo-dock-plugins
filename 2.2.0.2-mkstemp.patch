@@ -1,0 +1,11 @@
+--- origsrc/cairo-dock-plugins-2.2.0-2/CMakeLists.txt	2010-09-18 06:53:23.000000000 -0500
++++ src/cairo-dock-plugins-2.2.0-2/CMakeLists.txt	2010-09-19 22:26:38.733304100 -0500
+@@ -12,7 +12,7 @@ include (CheckSymbolExists)
+ project ("cairo-dock-plugins")
+ set (VERSION "2.2.0-2")
+ 
+-add_definitions (-std=c99 -Wstrict-prototypes -Wextra -Wwrite-strings -Wuninitialized -Werror-implicit-function-declaration) #-Wunreachable-code -Wno-unused-parameter -Wall
++add_definitions (-std=gnu99 -Wstrict-prototypes -Wextra -Wwrite-strings -Wuninitialized -Werror-implicit-function-declaration) #-Wunreachable-code -Wno-unused-parameter -Wall
+ if (NOT ${CMAKE_BUILD_TYPE})
+ 	add_definitions (-O3)
+ endif()

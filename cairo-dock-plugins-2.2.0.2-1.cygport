@@ -1,4 +1,4 @@
-inherit gnome2
+inherit cmake
 
 upv="${PV[1]}.${PV[2]}.${PV[3]}-${PV[4]}"
 
@@ -7,14 +7,8 @@ HOMEPAGE="http://www.glx-dock.org/"
 SRC_URI="http://launchpad.net/cairo-dock-plug-ins/${PV[1]}.${PV[2]}/${upv%-*}/+download/${PN}-${upv}.tar.gz"
 SRC_DIR="${PN}-${upv}"
 
-CYGCONF_ARGS="
-	--disable-old-gnome-integration
-	--disable-alsa-mixer
-	--disable-compiz-icon
-	--disable-network-monitor
-	--disable-powermanager
-	--disable-wifi
-	--disable-xgamma
+PATCH_URI="
+	2.2.0.2-as-needed.patch
+	2.2.0.2-localtime_r.patch
+	2.2.0.2-mkstemp.patch
 "
-MAKEOPTS+=" LDFLAGS=-no-undefined"
-

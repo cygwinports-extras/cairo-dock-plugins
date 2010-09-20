@@ -1,0 +1,29 @@
+--- origsrc/cairo-dock-plugins-2.2.0-2/gnome-integration/src/CMakeLists.txt	2010-09-18 06:53:23.000000000 -0500
++++ src/cairo-dock-plugins-2.2.0-2/gnome-integration/src/CMakeLists.txt	2010-09-19 20:49:06.466849200 -0500
+@@ -31,9 +31,9 @@ link_directories (
+ 	${CMAKE_SOURCE_DIR}/gvfs-integration)
+ 
+ target_link_libraries (${PACKAGE_GNOME_INTEGRATION}
++	gvfs-integration
+ 	${PACKAGE_LIBRARIES}
+-	${GNOME_INTEGRATION_LIBRARIES}
+-	gvfs-integration)
++	${GNOME_INTEGRATION_LIBRARIES})
+ 
+ ########### install files ###############
+ 
+--- origsrc/cairo-dock-plugins-2.2.0-2/xfce-integration/src/CMakeLists.txt	2010-09-18 06:53:23.000000000 -0500
++++ src/cairo-dock-plugins-2.2.0-2/xfce-integration/src/CMakeLists.txt	2010-09-19 20:50:38.144043700 -0500
+@@ -41,10 +41,10 @@ link_directories (
+ 	${CMAKE_SOURCE_DIR}/gvfs-integration)
+ 
+ target_link_libraries (${PACKAGE_XFCE_INTEGRATION}
++	gvfs-integration
+ 	${PACKAGE_LIBRARIES}
+ 	${XFCE_INTEGRATION_THUNAR_LIBRARIES}
+-	${XFCE_INTEGRATION_GVFS_LIBRARIES}
+-	gvfs-integration)
++	${XFCE_INTEGRATION_GVFS_LIBRARIES})
+ 
+ ########### install files ###############
+ 

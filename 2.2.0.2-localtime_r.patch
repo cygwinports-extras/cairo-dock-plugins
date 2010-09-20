@@ -1,0 +1,13 @@
+POSIX-1 requires first argument to be 'const'.
+
+--- origsrc/cairo-dock-plugins-2.2.0-2/tomboy/src/tomboy-dbus.c	2010-09-18 06:53:24.000000000 -0500
++++ src/cairo-dock-plugins-2.2.0-2/tomboy/src/tomboy-dbus.c	2010-09-19 20:50:03.671108800 -0500
+@@ -30,8 +30,6 @@
+ 
+ static DBusGProxy *dbus_proxy_tomboy = NULL;
+ 
+-extern struct tm *localtime_r (time_t *timer, struct tm *tp);
+-
+ #define g_marshal_value_peek_string(v)   (char*) g_value_get_string (v)
+ #define g_marshal_value_peek_object(v)   g_value_get_object (v)
+ 
